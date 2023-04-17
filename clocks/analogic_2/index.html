@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analogic Clock 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+		<h1>VS</h1>
+		<div class="wrapper">
+			<h2>Glassmorphism</h2>
+			<div class="container-01">	
+				<div class="clock" id="clock-01">
+					<div class="hour">
+						<div class="hr" id="hr"></div>
+					</div>
+					<div class="min">
+						<div class="mn" id="mn"></div>
+					</div>
+					<div class="sec">
+						<div class="sc" id="sc"></div>
+					</div>	
+					<div class="indicators">
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+					</div>	
+				</div>			
+				<p><span>CSS Property:</span> Backdrop-Filter</p>
+			</div>
+			<h2>Neumorphism</h2>
+			<div class="container-02">
+				<div class="clock">
+					<div class="center-nut"></div>	
+					<div class="center-nut2"></div>	
+					<div class="indicators">
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+					</div>	
+					<div class="sec-hand">
+						<div class="sec"></div>
+					</div>
+					<div class="min-hand">
+						<div class="min"></div>
+					</div>
+					<div class="hour-hand">
+						<div class="hr"></div>
+					</div>
+				</div>
+				<p><span>CSS Property:</span> Box Shadow</p>
+			</div>
+		</div>
+	</section>
+	<script type="text/javascript">
+		const deg = 6;
+		const hr = document.querySelector('#hr'); 
+		const mn = document.querySelector('#mn'); 
+		const sc = document.querySelector('#sc'); 
+
+		setInterval(() => {
+			let day = new Date()
+			let hh = day.getHours() * 30;
+			let mm = day.getMinutes() * deg;
+			let ss = day.getSeconds() * deg;
+
+			hr.style.transform = `rotateZ(${(hh)+(mm/12)}deg)`;
+			mn.style.transform = `rotateZ(${mm}deg)`;
+			sc.style.transform = `rotateZ(${ss}deg)`;
+		});
+
+		const sec = document.querySelector('.sec-hand .sec');
+		const min = document.querySelector('.min-hand .min');
+		const hour = document.querySelector('.hour-hand .hr');
+
+		setInterval(function(){
+			let time = new Date();
+			let secs = time.getSeconds() * 6;
+			let mins = time.getMinutes() * 6; 
+			let hours = time.getHours() * 30;
+
+			sec.style.transform = `rotateZ(${secs}deg)`;
+			min.style.transform = `rotateZ(${mins}deg)`;
+			hour.style.transform = `rotateZ(${hours + (mins/12)}deg)`;
+		});
+	</script>
+    
+    <script>
+        VanillaTilt.init(document.querySelector("#clock-01"), {
+			max: 15,
+			speed: 400,
+			glare: true,
+			"max-glare": 0.2,
+		});
+    </script>
+
+</body>
+</html>

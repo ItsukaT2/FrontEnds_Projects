@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HeathTech</title>
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+</head>
+<body>
+
+
+    <!--Container de tudo-->
+<div class="container" id="container">
+	<div class="form-container sign-up-container">
+
+		<form action="#">
+
+            <!--form de inscricao-->
+			<h1>Crie sua conta</h1>
+			<div class="social-container">
+				<a href="#" class="social"><img src="" alt="face" class="fab fa-facebook-f"></i></a>
+				<a href="#" class="social"><img src="" alt="google" class="fab fa-google-plus-g"></i></a>
+				<a href="#" class="social"><img src="" alt="linkedin" class="fab fa-linkedin-in"></i></a>
+			</div>
+			<span>ou use seu email</span>
+			<input type="text" placeholder="Nome" />
+			<input type="email" placeholder="Email" />
+			<input type="password" placeholder="Senha" />
+			<button class="enteri">Inscreva-se</button>
+		</form>
+	</div>
+
+
+    <!--tela para fazer o login -->
+	<div class="form-container sign-in-container">
+
+		<form action="#">
+
+            <!--form de login-->
+			<h1>Entrar</h1>
+			<div class="social-container">
+				<a href="#" class="social"><img src="" alt="face" class="fab fa-facebook-f"></i></a>
+				<a href="#" class="social"><img src="" alt="google" class="fab fa-google-plus-g"></i></a>
+				<a href="#" class="social"><img src="" alt="linkedin" class="fab fa-linkedin-in"></i></a>
+			</div>
+			<span>ou use sua conta</span>
+			<input type="email" placeholder="Email" />
+			<input type="password" placeholder="Senha" />
+			<!--tela para esqueci a senha-->
+            <a class="forgetpass" href="#">Esqueceu a senha?</a>
+			
+            <button class="enter">Entrar</button>
+		</form>
+	</div>
+
+
+<!--area de troca para login--> 
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>Ola!</h1>
+				<p>Já tem uma conta? clique no botão abaixo</p>
+				<button class="ghost" id="signIn">Entrar</button>
+			</div>
+
+<!--area de troca para inscricao -->
+			<div class="overlay-panel overlay-right">
+				<h1>Bem vindo!</h1>
+				<p>Nao tenha uma conta? clique no botao abaixo</p>
+				<button class="ghost" id="signUp">Inscreva-se</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--rodape
+<footer>
+	<p>
+		Area para colocar um rodape
+	</p>
+</footer>
+-->
+
+<!--JS-->
+<script>
+    const signUpButton = document.getElementById('signUp');
+const signInButton = document.getElementById('signIn');
+const container = document.getElementById('container');
+
+signUpButton.addEventListener('click', () => {
+	container.classList.add("right-panel-active");
+});
+
+signInButton.addEventListener('click', () => {
+	container.classList.remove("right-panel-active");
+});
+</script>
+    
+</body>
+</html>

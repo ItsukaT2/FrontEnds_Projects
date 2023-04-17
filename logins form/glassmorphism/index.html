@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login form glassmorphism</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login__content">
+            <!--<img src="https://assets.codepen.io/7773162/4kNYC.jpeg" alt="login image" class="login__img">-->
+    
+            <form action="" class="login__form">
+                <div>
+                    <h1 class="login__title">
+                        <span>Bem</span> vindo!
+                    </h1>
+                    <p class="login__description">
+                        Ola! Faça o login para continuar.
+                    </p>
+                </div>
+    
+                <div>
+                    <div class="login__inputs">
+                        <div>
+                            <label for="" class="login__label">Email</label>
+                            <input type="email" placeholder="Email" required class="login__input">
+                        </div>
+    
+                        <div>
+                            <label for="" class="login__label">Senha</label>
+    
+                            <div class="login__box">
+                                <input type="password" placeholder="Senha" required class="login__input" id="input-pass">
+                                <i class="ri-eye-off-line login__eye" id="input-icon"></i>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="login__check">
+                        <input type="checkbox" class="login__check-input">
+                        <label for="" class="login__check-label">Lembre-me</label>
+                    </div>
+                </div>
+    
+                <div>
+                    <div class="login__buttons">
+                        <button class="login__button">Entrar</button>
+                        <button class="login__button login__button-ghost">Inscreva-se</button>
+                    </div>
+    
+                    <a href="#" class="login__forgot">Esqueceu a senha?</a>
+                </div>
+            </form>
+            
+        </div>
+    </div>
+
+    <script>
+        /*=============== SHOW HIDDEN - PASSWORD ===============*/
+const showHiddenPass = (inputPass, inputIcon) => {
+	const input = document.getElementById(inputPass),
+		iconEye = document.getElementById(inputIcon);
+
+	iconEye.addEventListener("click", () => {
+		// Change password to text
+		if (input.type === "password") {
+			// Switch to text
+			input.type = "text";
+
+			// Add icon
+			iconEye.classList.add("ri-eye-line");
+			// Remove icon
+			iconEye.classList.remove("ri-eye-off-line");
+		} else {
+			// Change to password
+			input.type = "password";
+
+			// Remove icon
+			iconEye.classList.remove("ri-eye-line");
+			// Add icon
+			iconEye.classList.add("ri-eye-off-line");
+		}
+	});
+};
+
+showHiddenPass("input-pass", "input-icon");
+    </script>
+</body>
+</html>
