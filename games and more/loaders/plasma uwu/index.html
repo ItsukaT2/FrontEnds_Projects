@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plasma</title>
+    <link rel="stylesheet" href="style.scss">
+</head>
+<body>
+
+    <a href="https://codepen.io/Fieve/pen/bogzQW">link</a>
+
+    <div>
+
+<h1>PLASMA</h1>
+<!-- Plasma -->
+<svg width="0" height="0">
+ <filter id="gooey-plasma">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="20" result="blur"/>
+      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 50 -16" result="goo" />
+  </filter>
+</svg>
+<div class="plasma">
+  <div class="gooey-container">
+    <span class="bubble"></span>
+    <span class="bubble"></span>
+    <span class="bubble"></span>
+    <span class="bubble"></span>
+    <span class="bubble"></span>
+    <span class="bubble"></span>
+  </div>
+</div>
+<!--/Plasma -->
+
+  
+</div>
+<div>
+  
+  
+<h1>PLASMA-2</h1>
+<!-- Plasma-2 -->
+<svg width="0" height="0">
+ <filter id="gooey-plasma-2">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="20" result="blur"/>
+      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 50 -16" result="goo" />
+       <feTurbulence baseFrequency="0.03" numOctaves="1" />
+  
+       <feDisplacementMap id="displacement" in="blur" scale="50" xChannelSelector="B" yChannelSelector="G" />
+            
+       <feBlend id="blend-mode" in="gooey" mode="overlay" />
+  </filter>
+</svg>
+<div class="plasma-2">
+  <ul class="gooey-container">
+    <li class="bubble"></li>
+    <li class="bubble"></li>
+    <li class="bubble"></li>
+    <li class="bubble"></li>
+    <li class="bubble"></li>
+    <li class="bubble"></li>
+  </ul>
+</div>
+<!--/Plasma-2 -->
+
+  
+</div>
+<div>
+  
+  
+<h1>FILL</h1>
+<!-- Fill -->
+<svg width="0" height="0">
+ <filter id="gooey-fill">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="20" result="blur"/>
+      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 50 -16" result="goo" />
+  </filter>
+</svg>
+<div class="fill">
+  <div class="gooey-container">
+    <span class="level">
+      <span class="bubble"></span>
+      <span class="bubble"></span>
+      <span class="bubble"></span>
+      <span class="bubble"></span>
+      <span class="bubble"></span>
+      <span class="bubble"></span>
+      <span class="bubble"></span>
+      <span class="bubble"></span>
+    </span>
+  </div>
+</div>
+<!--/Fill -->
+
+  
+  
+</div>
+<div>
+  
+  
+<h1>FILL 2</h1>
+<!-- Fill 2-->
+<svg width="0" height="0">
+ <filter id="gooey-fill-2">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="20" result="blur"/>
+      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 50 -16" result="goo" />
+       <feTurbulence baseFrequency="0.03" numOctaves="1" />
+       <feDisplacementMap id="displacement" in="blur" scale="50" xChannelSelector="B" yChannelSelector="G" />
+       <feBlend id="blend-mode" in="gooey" mode="exclusion" />
+  </filter>
+</svg>
+<div class="fill-2">
+  <div class="gooey-container">
+    <span class="level">
+      <span class="bubble"></span>
+      <span class="bubble"></span>
+      <span class="bubble"></span>
+      <span class="bubble"></span>
+      <span class="bubble"></span>
+      <span class="bubble"></span>
+      <span class="bubble"></span>
+      <span class="bubble"></span>
+    </span>
+  </div>
+</div>
+<!--/Fill 2 -->
+</div>
+<div>
+  
+  
+<h1>BLACK-HOLE</h1>
+<!-- Black-Hole -->
+<svg width="0" height="0">
+ <filter id="gooey-black-hole">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="20" result="blur"/>
+      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 50 -16" result="goo" />
+  </filter>
+</svg>
+<div class="black-hole">
+  <ul class="gooey-container">
+    <li class="bubble"></li>
+    <li class="bubble"></li>
+    <li class="bubble"></li>
+    <li class="bubble"></li>
+    <li class="bubble"></li>
+    <li class="bubble"></li>
+  </ul>
+</div>
+<!--/Black-Hole -->
+</div>
+</body>
+</html>
