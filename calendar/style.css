@@ -16,15 +16,19 @@ body{
   background: radial-gradient(ellipse at center, rgba(76,76,76,1) 0%, rgba(43,43,43,1) 0%, rgba(23,23,23,1) 91%, rgba(23,23,23,1) 100%);
   }
   .calendar{
+    background: rgba( 255, 255, 255, 0.15 );
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur( 12px );
+    -webkit-backdrop-filter: blur( 12px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+
     color: #fff;
     margin: 10px auto;
-    background: #04b6e2;
     padding: 60px 40px 80px 40px;
     width: 95%;
     max-width: 600px;
     height: 325px;
-    border-radius: 5px;
-    box-shadow: 0px 2px 6px rgba(2,2,2,0.2);
     position: relative;
   }
   .calendar__title{
@@ -32,7 +36,7 @@ body{
   }
   .calendar--day-view{
     position: absolute;
-    border-radius: 3px;
+    border-radius: 10px;
     top: -2.5%;
     left: -2.5%;
     width: 100%;
@@ -57,7 +61,7 @@ body{
   .day-highlight, .day-add-event{
     padding: 8px 10px;
     margin: 12px 15px;
-    border-radius: 4px;
+    border-radius: 10px;
     background: #e7e8e8;
     color: #222;
     font-size: 14px;
@@ -310,7 +314,7 @@ body{
     font-size: 22px;
     font-family: 'Avenir', sans-serif;
     padding-bottom: 20px;
-    color: #222;
+    color: #fff;
     text-transform: uppercase;
     display: flex;
     flex-wrap: nowrap;
@@ -322,10 +326,10 @@ body{
     text-align: center;
     font-size: 16px;
     cursor: pointer;
-    color: #222;
+    color: #fff;
   }
   .cview__month-last:hover,.cview__month-next:hover{
-    color: #fff;
+    transform: scale(1.1em);
   }
   
   .cview__month-current{
